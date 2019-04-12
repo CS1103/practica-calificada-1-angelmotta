@@ -3,12 +3,20 @@
 
 void UTEC::TwoLinkedList::push_back1(int value){
     Node* temp = new Node(value);
-    if(tail1 == nullptr){
-        head1 = temp;
-        tail1 = temp;
-    } else{
-        tail1->next = temp;
-        tail1 = temp;
+    if(!is_merge()){    //Sino estan unidos
+        //std::cout << "Aun no estan unidos" << std::endl;
+        if(tail1 == nullptr){
+            head1 = temp;
+            tail1 = temp;
+        } else{
+            tail1->next = temp;
+            tail1 = temp;
+        }
+    }
+    else{
+        //std::cout << "Ya estan unidos...al final de tail" << std::endl;
+        tail->next = temp;
+        tail = temp;
     }
 }
 

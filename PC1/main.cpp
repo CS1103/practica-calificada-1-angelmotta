@@ -38,9 +38,10 @@ int main() {
     auto result1 = tll.merge(66);
     assert(result1 == string("Operación Exitosa"));
 
-    /*
+
     // Valores unidos
-    tll.pushback1(77);
+    tll.push_back1(77);
+    /*
     tll.pushback2(88);
     tll.pushback1(99);
     auto result2 = tll.merge(100);
