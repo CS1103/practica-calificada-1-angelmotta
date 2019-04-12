@@ -13,7 +13,7 @@ void UTEC::TwoLinkedList::push_back1(int value){
             tail1 = temp;
         }
     }
-    else{
+    else{   //Si ya esta unidas ambas listas
         //std::cout << "Ya estan unidos...al final de tail" << std::endl;
         tail->next = temp;
         tail = temp;
@@ -22,12 +22,19 @@ void UTEC::TwoLinkedList::push_back1(int value){
 
 void UTEC::TwoLinkedList::push_back2(int value){
     Node* temp = new Node(value);
-    if(tail2 == nullptr){
-        head2 = temp;
-        tail2 = temp;
-    } else{
-        tail2->next = temp;
-        tail2 = temp;
+    if(!is_merge()) {    //Sino estan unidos
+        if(tail2 == nullptr){
+            head2 = temp;
+            tail2 = temp;
+        } else{
+            tail2->next = temp;
+            tail2 = temp;
+        }
+    }
+    else{   //Si ya estan unidos
+        //std::cout << "Ya estan unidos...al final de tail" << std::endl;
+        tail->next = temp;
+        tail = temp;
     }
 }
 

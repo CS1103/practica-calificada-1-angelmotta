@@ -41,13 +41,14 @@ int main() {
 
     // Valores unidos
     tll.push_back1(77);
-    /*
-    tll.pushback2(88);
-    tll.pushback1(99);
+
+    tll.push_back2(88);
+    tll.push_back1(99);
+
     auto result2 = tll.merge(100);
     assert(result2 == string("Operación duplicada"));
+    /*
     assert(tll.getlist(0) == string("66 77 88 99 "));
-
     // Grabando Valores
     tll.save("output.txt");
 
