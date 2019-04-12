@@ -19,6 +19,7 @@ int main() {
     tll.push_back1(4);
     tll.push_back1(5);
 
+
     // Agregando valores a lista # 2
     tll.push_back2(0);
     tll.push_back2(10);
@@ -27,15 +28,17 @@ int main() {
     tll.push_back2(40);
     tll.push_back2(50);
 
+
     // Unir Listas y agregar valores a ambas listas
     assert(tll.getlist(1) == string("1 2 3 4 5 "));
     assert(tll.getlist(2) == string("0 10 20 30 40 50 "));
     assert(tll.getlist(0) == string());
 
-    auto resul1t1 = tll.merge(66);
+
+    auto result1 = tll.merge(66);
     assert(result1 == string("Operación Exitosa"));
 
-
+    /*
     // Valores unidos
     tll.pushback1(77);
     tll.pushback2(88);
@@ -66,6 +69,6 @@ int main() {
     for (int i = 0; i < test.size(); i++)
         assert(test[i] == output[i]);
 
-
+    */
     return 0;
 }
